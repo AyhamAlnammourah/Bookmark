@@ -160,8 +160,7 @@ html {
     justify-content: center;
     width: max-content;
     margin-inline: auto;
-
-    border-bottom: 4px solid var(--soft-red);
+    border-bottom: 1px solid var(--soft-btn);
 
     li {
       padding: 20px;
