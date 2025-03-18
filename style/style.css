@@ -26,11 +26,22 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+header.header--scroll {
+  background-color: #fff;
+  box-shadow: 0 0 10px var(--color-text);
 }
 
 html {
   font-size: 18px;
   text-transform: capitalize;
+  scroll-behavior: smooth;
 }
 
 .nav {
@@ -49,11 +60,17 @@ html {
 
   ul {
     display: flex;
+    gap: 6px;
 
     li a {
       padding: 7px 25px;
     }
   }
+}
+
+.link--hover:hover {
+  border-bottom: 3px solid var(--soft-red);
+  transition: none;
 }
 
 .continear {
@@ -74,10 +91,17 @@ html {
   background-color: var(--soft-red);
   color: #fff;
 }
+.button--soft-red:active {
+  background-color: #b73e3e;
+}
 
 .button--soft-blue {
   background-color: var(--soft-blue);
   color: #fff;
+}
+
+.button--soft-blue:active {
+  background-color: #3e4da3;
 }
 
 .button--radius {
@@ -221,9 +245,25 @@ li.active {
 
 .icon {
   display: none;
-
-  i {
-    font-size: 2rem;
+  position: relative;
+  height: 1.5rem;
+  cursor: pointer;
+  .bar {
+    width: 2rem;
+    height: 0.3rem;
+    border-radius: 10px;
+    background-color: var(--soft-blue);
+    margin-bottom: 5px;
+  }
+  .menu-Bar2 {
+    display: none;
+  }
+  .menu-Bar1 {
+    rotate: 45deg;
+    translate: 0 0.56rem;
+  }
+  .menu-Bar3 {
+    rotate: -45deg;
   }
 }
 
@@ -343,6 +383,7 @@ li.active {
     }
   }
 }
+
 /* media */
 
 @media (min-width: 920px) and (max-width: 1095px) {
@@ -417,6 +458,48 @@ li.active {
 @media (max-width: 919px) {
   .nav-list-top {
     display: none;
+  }
+
+  .nav-mobile-up {
+    position: absolute;
+    top: -5rem;
+    left: 50%;
+    translate: -50%;
+    background-color: #152362a1;
+    width: 95%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px var(--color-text);
+    padding: 20px;
+  }
+  .nav-mobile {
+    top: 5.5rem;
+
+    animation: menu cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s 1;
+
+    .nav-list-top {
+      display: block;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+
+      ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        li a {
+          color: var(--soft-btn);
+        }
+      }
+    }
+  }
+
+  @keyframes menu {
+    0% {
+      top: -5rem;
+    }
   }
 
   .icon {

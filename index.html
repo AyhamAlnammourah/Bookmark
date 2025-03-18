@@ -29,9 +29,17 @@
           </div>
           <div class="nav__list_link nav-list-top">
             <ul>
-              <li><a href="#" class="color-primary">features</a></li>
-              <li><a href="#" class="color-primary">pricing</a></li>
-              <li><a href="#" class="color-primary">contact</a></li>
+              <li>
+                <a href="#features" class="color-primary link--hover"
+                  >features</a
+                >
+              </li>
+              <li>
+                <a href="#pricing" class="color-primary link--hover">pricing</a>
+              </li>
+              <li>
+                <a href="#contact" class="color-primary link--hover">contact</a>
+              </li>
             </ul>
             <div class="nav__list_link__button">
               <button class="button button--soft-red button--radius">
@@ -39,9 +47,11 @@
               </button>
             </div>
           </div>
-          <span class="icon"
-            ><i class="fa-solid fa-bars icon-color-blue"></i
-          ></span>
+          <span class="icon" id="menuDrop">
+            <div class="bar icon-color-blue"></div>
+            <div class="bar icon-color-blue"></div>
+            <div class="bar icon-color-blue"></div>
+          </span>
         </nav>
       </div>
     </header>
@@ -78,7 +88,7 @@
           </div>
         </div>
 
-        <div class="features">
+        <div class="features" id="features">
           <div class="features__head section__head">
             <h2>features</h2>
             <p class="margin-block">
@@ -279,7 +289,7 @@
     </main>
 
     <footer>
-      <div class="contact">
+      <div class="contact" id="contact">
         <h4>35.000 + already joined</h4>
         <h1>stay up-to-data with what we're doing</h1>
         <form action="emailto:example@gmail.com" method="post">
@@ -319,5 +329,6 @@
         </nav>
       </div>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>
