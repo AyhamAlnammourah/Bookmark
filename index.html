@@ -99,15 +99,23 @@
           </div>
           <div class="features__nav margin-block">
             <ul>
-              <li class="active">simple bookmarking</li>
-              <li>soeedy searching</li>
-              <li>easy sharing</li>
+              <li onclick="featureFun('tap1')" class="features-buttons-contant">
+                simple bookmarking
+              </li>
+              <li onclick="featureFun('tap2')" class="features-buttons-contant">
+                soeedy searching
+              </li>
+              <li onclick="featureFun('tap3')" class="features-buttons-contant">
+                easy sharing
+              </li>
             </ul>
           </div>
           <div class="features__sec section__2step section__2step_left">
             <div class="features__sec_info section__info">
-              <h1 class="color-primary color-primary">bookmark in one click</h1>
-              <p class="par-garay margin-block">
+              <h1 class="color-primary color-primary" id="features-title">
+                bookmark in one click
+              </h1>
+              <p class="par-garay margin-block" id="features-paragraph">
                 organize your bookmarks however you like. our simple
                 drag-and-drop interface gives you complete control over how you
                 manage favourite sites.
@@ -120,9 +128,10 @@
             </div>
             <div class="features__sec_image section__image">
               <img
-                src="images/illustration-features-tab-1.svg"
+                src="images/illustration-features-tab-1.svg "
                 alt=""
                 class="image-width image-left"
+                id="features-image"
               />
               <div class="image_box image-box-left"></div>
             </div>
