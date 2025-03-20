@@ -193,6 +193,9 @@ html {
 .margin-block {
   margin-block: 15px;
 }
+.section-margin-block {
+  margin-block: 5rem;
+}
 
 .section__head {
   text-align: center;
@@ -223,6 +226,7 @@ html {
       position: relative;
       color: var(--soft-Grayish-blue);
       z-index: 20;
+      flex-grow: 1;
     }
 
     li::after {
